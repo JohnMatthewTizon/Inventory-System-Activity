@@ -1,0 +1,32 @@
+
+html { 
+	background-color: rgb(173, 189, 227);
+	display: block;
+	margin: auto;
+} 
+
+body {
+    background-color: rgb(227, 210, 173);
+	font-family: sans-serif; 
+	width: 50%;
+	text-align: center;
+} 
+
+section{
+	text-align: center;
+}
+
+h1{
+	font-weight: normal;
+	text-align: center;
+	
+} 
+
+.Output{
+	display: block;
+	margin: auto;
+}
+
+.FinalOutput{
+	text-align: center;
+}
