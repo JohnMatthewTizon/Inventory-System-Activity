@@ -7,47 +7,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Inventory System</h1>
-    <form action="">
-      <section>
-        <label>Item Stocks:</label>
-        <input type="text" id="ItemStocks" name="Item Stocks" /> <br />
+    <div class="addForm-container">
+      <h1>Inventory System</h1>
+      <div class="form-group">
+        <form action="">
+          <label>Item Stocks:</label>
+          <input type="text" id="ItemStocks" name="Item Stocks" /> <br />
 
-        <label>Price:</label>
-        <input type="text" id="Price" name="Price" /> <br />
+          <label>Price:</label>
+          <input type="text" id="Price" name="Price" /> <br />
 
-        <label>Date:</label>
-        <input type="text" id="Date" name="Date" /> <br />
+          <label>Date:</label>
+          <input type="text" id="Date" name="Date" /> <br />
 
-        <label>Sold Items:</label>
-        <input type="text" id="SoldItems" name="Sold Items" /> <br />
-      </section>
-    </form>
+          <label>Sold Items:</label>
+          <input type="text" id="SoldItems" name="Sold Items" /> <br />
 
-    <button class="Output" onclick="show()">Submit</button>
-    <div class="FinalOutput" id="placeholder"></div>
+          <input type="submit" onclick="show()" />
+        </form>
+      </div>
+      <div class="FinalOutput" id="placeholder"></div>
+    </div>
+    <script>
+      let resultText = document.getElementById("placeholder");
+
+      function show() {
+        let stocks = document.getElementById("ItemStocks").value;
+        let price = document.getElementById("Price").value;
+        let Date = document.getElementById("Date").value;
+        let solds = document.getElementById("SoldItems").value;
+
+        Rs = stocks - solds;
+        sales = price * solds;
+
+        resultText.innerHTML =
+          "The specific date of the Information:" +
+          Date +
+          "<br>" +
+          "The remaining stocks:" +
+          Rs +
+          "<br>" +
+          "The Total sales:" +
+          sales;
+      }
+    </script>
   </body>
-  <script>
-    let resultText = document.getElementById("placeholder");
-
-    function show() {
-      let stocks = document.getElementById("ItemStocks").value;
-      let price = document.getElementById("Price").value;
-      let Date = document.getElementById("Date").value;
-      let solds = document.getElementById("SoldItems").value;
-
-      Rs = stocks - solds;
-      sales = price * solds;
-
-      resultText.innerHTML =
-        "The specific date of the Information:" +
-        Date +
-        "<br>" +
-        "The remaining stocks:" +
-        Rs +
-        "<br>" +
-        "The Total sales:" +
-        sales;
-    }
-  </script>
 </html>
